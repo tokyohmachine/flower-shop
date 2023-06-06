@@ -1,0 +1,35 @@
+%h2-elements {
+  margin-top: 7%;
+  font-size: 40px;
+  margin-left: -18px;
+}
+
+%paragraph {
+  margin-left: -18px;
+}
+
+%card-element {
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+%row-margin {
+  margin-top: 10%;
+}
+
+/* Use %h2-elements */
+.h2-main {
+  @extend %h2-elements;
+}
+
+.parag {
+  @extend %paragraph;
+}
+
+.row.align-items-start.text-center {
+  @extend %row-margin;
+
+  .card {
+    @extend %card-element;
+  }
+}

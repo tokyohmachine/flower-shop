@@ -1,0 +1,208 @@
+// Placeholder Selectors
+
+%f-5 {
+  margin-left: 6%;
+}
+
+%dimensions {
+  height: 16px;
+  width: 16px;
+}
+
+%width-150 {
+  width: 150px;
+}
+
+
+/* Shop All Page  */
+.breadcrumb-container {
+    flex-basis: 100%;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 0 20px 16px;
+
+    .breadcrum-shop {
+        margin-top: 30px;
+        margin-left: 20px;
+      }
+      
+  }
+  
+ 
+  .fs-5 {
+    @extend %f-5;
+  }
+
+  aside {
+    margin-top: 50px;
+
+    .fs-5 {
+      @extend %f-5;
+      }
+      
+    span {
+        margin-left: -5px;
+      }
+      
+      
+  }
+
+.range-slider {
+  @extend %width-150;
+  text-align: center;
+  position: relative;
+    
+  .rangeValues {
+    display: block;
+
+    input[type=range] {
+      -webkit-appearance: none;
+      border: 1px solid white;
+      @extend %width-150;
+      position: absolute;
+      left: 0;
+    }
+          
+    input[type=range]::-webkit-slider-runnable-track {
+      @extend %width-150;
+      height: 5px;
+      background: #ddd;
+      border: none;
+      border-radius: 3px;
+    
+    }
+    
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      border: none;
+      @extend %dimensions;
+      border-radius: 50%;
+      background: #21c1ff;
+      margin-top: -4px;
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
+    }
+          
+    input[type=range]:focus {
+      outline: none;
+    }
+    
+    input[type=range]:focus::-webkit-slider-runnable-track {
+      background: #ccc;
+    }
+    
+    input[type=range]::-moz-range-track {
+      @extend %width-150;
+      height: 5px;
+      background: #ddd;
+      border: none;
+      border-radius: 3px;
+    }
+    
+    input[type=range]::-moz-range-thumb {
+      border: none;
+      @extend %dimensions;
+      border-radius: 50%;
+      background: #21c1ff;
+      
+    }
+          
+          
+    /*hide the outline behind the border*/
+          
+    input[type=range]:-moz-focusring {
+      outline: 1px solid white;
+      outline-offset: -1px;
+    }
+    
+    input[type=range]::-ms-track {
+      @extend %width-150;
+      height: 5px;
+      background: transparent;
+      border-color: transparent;
+      border-width: 6px 0;
+      color: transparent;
+      z-index: -4;
+    
+    }
+          
+    input[type=range]::-ms-fill-lower {
+      background: #777;
+      border-radius: 10px;
+    }
+    
+    input[type=range]::-ms-fill-upper {
+      background: #ddd;
+      border-radius: 10px;
+    }
+    
+    input[type=range]::-ms-thumb {
+      border: none;
+      @extend %dimensions;
+      border-radius: 50%;
+      background: #21c1ff;
+    }
+    
+    input[type=range]:focus::-ms-fill-lower {
+      background: #888;
+    }
+    
+    input[type=range]:focus::-ms-fill-upper {
+      background: #ccc;
+    }
+          
+  }
+}
+
+.dropdown h3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+  
+.color-option {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 5px;
+  cursor: pointer;
+}
+  
+
+.img-fluid-shop {
+  width: 1100px;
+  height: 280px;
+  object-fit: cover;
+  object-position: 50% 50%
+}
+  
+.h3-main {
+  margin-top: 5%;
+  font-size: 25px;
+    
+}
+  
+  /* Sort by */
+  .sort-container {
+    margin: 30px 0px;
+    .sortBy {
+        display: flex;
+        justify-content: flex-end;
+
+        select {
+            width: 100px;
+            .form-select {
+                max-width: 100%;
+                max-width: 100px;
+              }
+          }
+          
+      }
+  }
+  
+  
+  
+ 
+  
+  

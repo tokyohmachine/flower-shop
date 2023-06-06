@@ -1,0 +1,52 @@
+/* Placeholder selector */
+%h2-elements {
+    margin-top: 7%;
+    font-size: 40px;
+    margin-left: -18px;
+  }
+
+  /* About Page */
+.about-container {
+    margin-top: 7%;
+  
+    /* First container about */
+    .card-box, .card-about-second {
+      position: relative;
+      z-index: 2;
+      left: 20%;
+
+      @media (min-width: 992px) {
+        .card-box, .card-about-second {
+          left: 20%;
+        }
+      }
+  
+      .about-body {
+        background-color: #F1F6F9;
+      }
+  
+      /* Extend placeholder selector */
+      .h2-main {
+        @extend %h2-elements;
+      }
+    }
+  
+    /* Image container */
+    .card-img-about {
+      width: 100%;
+      max-width: 450px;
+      height: auto;
+    }
+  
+    
+  }
+
+
+
+
+  
+  
+  
+  
+  
+  
