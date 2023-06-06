@@ -2,17 +2,14 @@
 header .first-nav {
   margin-top: 30px;
   text-align: center;
-  align-items: center; 
-}
+  align-items: center; }
   header .first-nav h2 {
     margin-left: -25px;
-    padding-top: 10px; 
-  }
+    padding-top: 10px; }
   header .first-nav .bi-bag-fill {
     fill: #8E3200;
     width: 40px;
-    height: 50px; 
-  }
+    height: 50px; }
   header .first-nav .icon-tabler-bug {
     fill: red;
     width: 50px;
@@ -47,6 +44,37 @@ header .nav-item .nav-link {
   margin-top: 7%;
   font-size: 40px;
   margin-left: -18px; 
+}
+
+.about-container {
+  margin-top: 7%;
+}
+
+.card-box {
+  position: relative;
+  z-index: 2;
+  left: 20%;
+}
+
+@media (min-width: 992px) {
+  .card-box,
+  .card-about-second {
+    left: 20%;
+  }
+}
+
+.about-body {
+  background-color: #F1F6F9;
+}
+
+.card-img-about {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+}
+
+.card-about-second {
+  left: 20%;
 }
 
 .parag {
@@ -311,7 +339,6 @@ aside {
         max-width: 100%;
         max-width: 100px; 
       }
-
 
 
 
