@@ -108,11 +108,48 @@ h2:hover {
 
 /* ABOUT  */
 #card-about {
-  margin: 30% auto; 
+  margin: 30% 0px 30% 85px; 
   background-color: white;
-  padding: 50px;
+  padding: 60px;
   width: 90%;
   border-radius: 5px;
+ 
+}
+
+/* IMAGES WHITE BAR */
+
+.second-card {
+  position: relative;
+  overflow: hidden; /* To ensure the transparent bar doesn't overflow outside the container */
+}
+
+.transparent-bar {
+  position: absolute;
+  bottom: 28%;
+  left: 0;
+  width: 100%;
+  height: 50px; 
+  background-color: white; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease; 
+}
+
+.second-card:hover .transparent-bar {
+  opacity: 1; 
+  cursor: pointer; 
+}
+
+#home-shop-button {
+  display: none;
+  background-color: #224B0C;
+  color: white;
+  border-radius: 0;
+  margin: 10px auto 0px;
+  padding: 10px 40px; 
+  width: 100%;
 }
 
 .custom-border {
@@ -132,6 +169,75 @@ h2:hover {
 #title-handle {
   margin: 30px 8.5%;
 }
+
+#viewAllButton{
+  background-color: #224B0C;
+  border-radius: 0;
+  margin: 50px auto;
+  padding: 10px 40px; 
+  max-width:200px;
+}
+
+/* CONTACT */
+.contact-container {
+  padding: 50px;
+  background-color: white;
+ margin: 10% auto;
+  width: 80%;
+}
+
+.contact-title {
+  color: #224b0c; 
+  font-size: 16px; 
+  margin-top: 20px; 
+  padding: 20px 20px 10px 20px;
+}
+
+.custom-border-contact {
+  border-bottom: 2px solid #224B0C; 
+  width: 15%; 
+  margin-left: 20px;
+}
+
+.contact-list {
+  list-style: none; 
+  margin: 15px 0px 20px -10px;
+  padding: 20px 30px 20px 30px;
+}
+
+.contact-list li {
+  line-height: 2rem; 
+}
+
+label {
+  margin-left: 20px;
+  padding: 20px 0px 0px;
+}
+
+#button-add {
+  background-color:  #AED8CC;
+  color: #224B0C;
+  border-radius: 0;
+  max-width:100px;
+  cursor: pointer;
+}
+
+
+#input:focus {
+  border-color: black;
+}
+
+#input:hover {
+  border: 3px solid black;
+}
+
+#button-add:hover {
+  background-color: #A1CCD1;
+}
+
+
+
+
 
 /* Shop All Page  */
 
@@ -179,19 +285,8 @@ select {
 
 
 
-/* Contact Form */
-/* .contact-container {
-  margin: 7% 0; }
 
-.contact-list {
-  list-style: none; }
 
-.contact-list li {
-  line-height: 4rem; }
-
-.button-contact {
-  width: 100%; }
- */
 
 
 /* chat wrapper */
