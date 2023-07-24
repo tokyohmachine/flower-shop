@@ -57,9 +57,9 @@
           >I'm a title. Click here to add your own text and edit me.</h3>
         </div>
         {{#each productHome}}
-          <div class="col-md-3">
-            <div
-              class="card mb-2 border-0 ms-3"
+          <div class="col-md-3 card-container">
+            <div 
+              class="second-card card mb-2 border-0 ms-3"
               style="width: 17rem; height: 590px;"
             >
               <img
@@ -69,14 +69,23 @@
                 alt="{{this.description}}"
                 style="cursor: pointer;"
               />
-              <div class="card-body text-left">
+              <p class="transparent-bar" style="font-size: 12px;">Quick view</p>
+
+              <div class="card-body text-center">
                 <h4 class="card-title">{{this.description}}</h4>
                 <p class="card-text">{{this.price}}</p>
+
+                <button id="home-shop-button" class="btn border-0">Add to cart</button>
               </div>
+              
+              
             </div>
           </div>
         {{/each}}
+
+        <button id="viewAllButton" class="btn"><a href="shop-all.html" style="text-decoration: none; color: white">View All</a></button>
       </div>
+      
     </div>
     </script>
   </head>
@@ -176,17 +185,54 @@
     <div class="container-fluid bg-white" id="homeShop">
       
       <!-- populate with handlebars-->
+      
     </div>
 
+    <!-- CONTACT -->
+    
+    <div class="container-fluid">
+      <div class="contact-container">
+      <div class="row justify-content-center">
+        <div class="col-4">
+          <h3 class="contact-title " >CONTACT US</h3>
+          <p class="custom-border-contact"></p>
+          <ul class="contact-list ">
+            <li>500 Terry Francine Street,</li>
+            <li>San Francisco, CA</li>
+            <li>123-456-7890</li>
+            </ul>
+        </div>
+        <div class="col-4">
+          <h3 class="contact-title " >OPENING HOURS</h3>
+          <p class="custom-border-contact"></p>
+          <ul class="contact-list ">
+            <li>Mon - Fri: 7am - 10pm</li>
+            <li>Saturday: 8am - 10pmm</li>
+            <li>Sunday: 8am - 11pm</li>
+          </ul>
+        </div>
+        <div class="col-4">
+          <h3 class="contact-title">STAY UPDATED</h3>
+          <p class="custom-border-contact"></p>
+            <label>Sign up for our newsletter</label>
+            <div class="input-group" style="margin-left: 20px; margin-top: 10px;">
+              
+              <input id="input" type="text" class="form-control" style="max-width: 250px !important; border-radius: 0; margin-right: 10px;" placeholder="Enter your email here*" aria-label="Recipient's username" aria-describedby="button-add">
+              <button class="btn" type="button" id="button-add">Join</button>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  
+      
     <!-- Footer -->
-    <footer class="container-fluid text-center mt-5">
-      <div class="footer-content">
-        <h4 class="lh-lg" style="font-size: 16px">Flor&cultura</h4>
-        <p class="lh-lg" style="font-size: 14px">info@mysite.com</p>
-        <p class="lh-lg mt-4" style="font-size: 12px">
+    <footer class="container-fluid text-center mt-3">
+        <p >
           &copy;2023 by Flor&cultura. All rights reserved.
         </p>
-      </div>
+     
     </footer>
 
     <script src="Script/index.js"></script>
