@@ -9,33 +9,33 @@ window.onload = function() {
 const context = {
     productHome: [
       {
-      description: "bouquet",
+      description: "Bouquet",
       image: "Images/shop-all/news-flowers/1.webp",
       price: "$28.00",
       
       },
       {
-        description: "bouquet",
+        description: "Bouquet",
         image: "Images/shop-all/news-flowers/2.webp",
         price: "$28.00",
        
       },
       {
-        description: "bouquet",
+        description:"Bouquet",
         image: "Images/shop-all/news-flowers/4.webp",
         price: "$28.00",
         
       },
       
       {
-        description: "bouquet",
+        description: "Bouquet",
         image: "Images/shop-all/news-flowers/5.webp",
         price: "$75.00",
         
         
       },
       {
-        description: "bouquet",
+        description: "Bouquet",
         image: "Images/shop-all/news-flowers/6.webp",
         price: "$75.00",
        
@@ -43,20 +43,20 @@ const context = {
       },
       
       {
-        description: "bouquet",
+        description: "Bouquet",
         image: "Images/shop-all/news-flowers/7.webp",
         price: "$100.00",
         
       },
       {
-        description: "bouquet",
+        description: "Bouquet",
         image: "Images/shop-all/news-flowers/8.webp",
         price: "$100.00",
         
       },
       
       {
-        description: "bouquet",
+        description: "Bouquet",
         image: "Images/shop-all/news-flowers/9.webp",
         price: "$100.00",
         
@@ -77,4 +77,13 @@ $(document).ready(function() {
    
   });
   
+ 
+  $('.second-card').on('mouseover', function() {
+    $(this).find("#home-shop-button").show('fast');
+  });
+
+  $('.second-card').on('mouseleave', function() {
+    $(this).find('#home-shop-button').hide('fast');
+  });
+
 });
