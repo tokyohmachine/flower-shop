@@ -1,232 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flowers & Bugs</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Floral Essence</title>
-  <!-- Fonts -->
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
-  <!-- CSS -->
-   <!-- <link rel='stylesheet' href='CSS/style.css'> -->
-   <link rel='stylesheet' href='CSS/main.css'>
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  <!-- Slick/ Jquery -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="CSS/main.css" />
 
-  <!-- Handlebars -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <script id="shopAll" type="text/x-handlebars-template">
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Include emoji-picker-element library files -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.min.js"></script>
+   -->
+    <!-- Handlebars -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+    <script id="homeProducts" type="text/x-handlebars-template">
     <div class="container-md">
-      <div class="slider">
-        {{#each products}}
-        <div class="slide">
-          <div class="card border-0" style="width: 18rem;">
-            <img src="{{this.image}}" class="slide-image" alt="{{this.image}}">
-            
-            <div class="card-body">
-              <h4 class="card-title">{{this.description}}</h4>
-              <p class="card-text">{{this.price}}</p>
-              {{#if sale}}
-              <p class="price"><del>Price: {{this.price}}</del></p>
-              <p class="sale">On Sale! {{this.sale}}</p>
-              {{/if}}
+      <div class="row bg-white">
+        <div id="title-handle">
+          <h3 class="text-left" style="color: #224B0C; font-size: 16px;">SPRING
+            BOUQUETS</h3>
+          <p class="custom-border mt-3" style="margin-bottom: 25px;"></p>
+          <h3
+            class="mb-3"
+            style="font-size: 20px; font-style: italic; color: #224B0C;"
+          >I'm a title. Click here to add your own text and edit me.</h3>
+        </div>
+        {{#each productHome}}
+          <div class="col-md-3">
+            <div
+              class="card mb-2 border-0 ms-3"
+              style="width: 17rem; height: 590px;"
+            >
+              <img
+                src="{{this.image}}"
+                class="card-img-top shop-image"
+                id="redirectImage"
+                alt="{{this.description}}"
+                style="cursor: pointer;"
+              />
+              <div class="card-body text-left">
+                <h4 class="card-title">{{this.description}}</h4>
+                <p class="card-text">{{this.price}}</p>
+              </div>
             </div>
           </div>
-        </div>
         {{/each}}
-        <button class="custom-prev" data-bs-target="#carouselExample" data-bs-slide="prev">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="custom-next" data-bs-target="#carouselExample" data-bs-slide="next">
-          <i class="fas fa-chevron-right"></i>
-        </button>
       </div>
     </div>
-  </script>
-</head>
+    </script>
+  </head>
 
+  <body
+    style="
+      background-image: url('Images/back-1.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+      background-attachment: fixed;
+    "
+  >
+    <header class="fixed-top">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid ">
 
-<body>
-  <header>
-    <div class="container-sm border-bottom">
-      <nav class="nav first-nav d-flex flex-row mb-3 justify-content-between">
-      
-        <h2 class="fs-1 ">Flowers &<span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bug walking-bug" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <path d="M9 9v-1a3 3 0 0 1 6 0v1"></path>
-          <path d="M8 9h8a6 6 0 0 1 1 3v3a5 5 0 0 1 -10 0v-3a6 6 0 0 1 1 -3"></path>
-          <path d="M3 13l4 0"></path>
-          <path d="M17 13l4 0"></path>
-          <path d="M12 20l0 -6"></path>
-          <path d="M4 19l3.35 -2"></path>
-          <path d="M20 19l-3.35 -2"></path>
-          <path d="M4 7l3.75 2.4"></path>
-          <path d="M20 7l-3.75 2.4"></path>
-       </svg></span></h2>
+          <a class="navbar-brand" href="#">
+            <img src="Images/icons8-flower-glyph-neue-32.png" style="display: inline; vertical-align: middle; width: 40px;">
+            <span style="display: inline; vertical-align: middle; font-size: 16px;">&cultura</span>
+          </a>
+
      
-        <button class="btn button "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-fill" viewBox="0 0 16 16">
-            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z" />
-          </svg>
-        </button>
-       
-      </nav>
+        <div id="button-container">
+          <!-- Bag -->
+          <button class="btn ">
+            <img src="Images/icons8-bag-ios-16-filled-32.png" style="width: 25px; margin-right: 15px;">
+          </button>
 
-      <div>
-        <ul class="nav  justify-content-center">
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html" class="fw-light">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html" class="fw-light">Contact</a></li>
-          <li class="nav-item"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" class="fw-light">Shop</a>
-            <ul class="dropdown-menu">
-              
-              <li><a class="dropdown-item" href="shop-all.html">Shop All</a></li>
-              <li><a class="dropdown-item" href="wedding-bouquets.html">Wedding Arrangements</a></li>
-              <li><a class="dropdown-item" href="holiday-bouquets.html">Holiday Bouquets</a></li>
-              <li><a class="dropdown-item" href="special-ocasions.html">Special Occasions</a></li>
+          <!-- hamburguer button -->
+          <button id="menuToggle">
+            <i class="fas fa-bars"></i>
+
+            <ul id="menu">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Log In</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="shop-all.html">Shop</a>
+              </li>
             </ul>
-          </li>
+          </button>
+        </div>
+        </div>
 
-        </ul>
-      </div>
+        
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <div class="me-3 container-md">
+      <h3 id="h3-main" class="text-left mt-5 mb-4">
+        Step into spring with a colorful bouquet
+      </h3>
+      <p class="custom-border"></p>
+      <h1 id="h1-main" class="text-left">SPRI-<br />NG IS<br />HERE</h1>
+      <button id="spring-button" class="btn ms-2 mt-3">
+        <a class="a-spring" href="shop-all.html">SHOP NOW</a>
+      </button>
     </div>
-  </header>
 
-
-  <!-- Main -->
+    <!-- ABOUT -->
     <div class="container-md">
-        <h1 class="h1-main text-center ">Flowers & Bugs</h1>
-        <p class="parag text-center fs-5">Arrangements For Every Occasion</p>
-
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-        
-            <div class="carousel-item active" data-bs-interval="3000">
-              <img src="Images/images-home/image-four.jpg" class="img d-block img-fluid mx-auto" alt="Blue sky and orange flowers" style="width:900px">
-              <div class="caption" style="margin-left: 9.8%; max-width: 900px">Blue sky and orange flowers</div>
-            </div>
-        
-            <div class="carousel-item" data-bs-interval="2000">
-              <img src="Images/images-home/image-two.jpg" class="img d-block img-fluid mx-auto" alt="Girl in a flower shop" style="width:900px">
-              <div class="caption" style="margin-left: 9.8%; max-width: 900px">Girl in a flower shop</div>
-            </div>
-        
-            <div class="carousel-item" data-bs-interval="4000">
-              <img src="Images/images-home/image-three.jpg" class="img d-block img-fluid mx-auto" alt="Decorative flower into the vase" style="width:900px">
-              <div class="caption" style="margin-left: 9.8%; max-width: 900px">Flowers into the vase</div>
-            </div>
-        
-            <div class="carousel-item" data-bs-interval="2500">
-              <img src="Images/images-home\image-one.jpg" class="img d-block img-fluid mx-auto" alt="Bouquet of flowers" style="width:900px">
-              <div class="caption" style="margin-left: 9.8%; max-width: 900px">Bouquet</div>
-            </div>
-          </div>
-        </div>
-    </div>
-    </div>
- 
-
-  <!-- Shop Carousel - populate with handlebars-->
- 
-  <section class="container-md mt-5" id="shop">
-    
-  </section>
-  
-  
-<!-- Contact -->
-<section class="container contact-container">
-  
-    <div class="row">
-      <div class="col-6 text-center">
-        <h2 class="fs-2">Contact Floral Essence</h2>
-        <ul class="contact-list">
-          <li  >500 Terry Francois Street, 6th Floor. San Francisco, CA 94158</li>
-          <li>info@mysite.com</li>
-          <li>123-456-7890</li>
-        </ul>
+      <div id="card-about" class="card-body">
+        <h3 class="text-left" style="color: #224b0c; font-size: 16px">
+          ABOUT US
+        </h3>
+        <p class="custom-border mt-3"></p>
+        <h3
+          class="mb-2"
+          style="font-size: 20px; font-style: italic; color: #224b0c"
+        >
+          I'm a title. Click here to edit me
+        </h3>
+        <p class="card-text text-left" id="card-text">
+          Since 2000, we have committed to providing clients only the finest
+          flowers, bouquets and arrangements. Our arrangements are of the
+          highest quality, and are offered at unbeatable prices. As the best
+          Flower Shop in town, we go above and beyond for our clients and make
+          sure they leave our shop happy.
+        </p>
       </div>
-    <div class="col-6">
-      <form class="row g-3">
-    
-        <div class="col-md-6">
-          <label for="inputName" class="form-label">Name</label>
-          <input type="text" class="form-control" id="inputName" placeholder="First name" aria-label="First name">
-        </div>
-    
-        <div class="col-md-6">
-          <label for="inputEmail" class="form-label">Email</label>
-          <input type="email" class="form-control" id="inputEmail" placeholder="user@email.com">
-        </div>
-    
-        <div class="col-md-6">
-          <label for="inputPhone" class="form-label">Phone</label>
-          <input type="text" class="form-control" id="inputPhone">
-        </div>
-    
-        <div class="col-md-6">
-          <label for="inputAddress" class="form-label">Address</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-        </div>
-    
-        <div class="col-12">
-          <label for="inputSubject" class="form-label">Subject</label>
-          <input type="text" class="form-control" id="inputSubject" placeholder="Type the subject">
-        </div>
-    
-        <div class="col-12">
-          <label for="inputMessage" class="form-label">Message</label>
-          <textarea class="form-control" placeholder="Type your message here" id="inputMessage" style="height: 100px"></textarea>
-        </div>
-        
-        <div class="col-12">
-          <button type="submit" class="btn btn-dark btn-block button-contact">Submit</button>
-        </div>
-    
-      </form>
     </div>
-  </div>
-</div>
 
-</section>
-
-
-  <div class="container sub-container">
-    <h2 class="text-center">Subscribe Form</h2>
     
-    <div class="input-group justify-content-center">
-      <input type="text" class="form-control" style="max-width: 400px !important;" placeholder="eg., email@example.com" aria-label="Recipient's username" aria-describedby="button-addon2">
-      <button class="btn btn-dark" type="button" id="button-addon2">Join</button>
+
+    <div class="container-fluid bg-white" id="homeShop">
+      
+      <!-- populate with handlebars-->
     </div>
-  </div>
-  
-  
 
+    <!-- Footer -->
+    <footer class="container-fluid text-center mt-5">
+      <div class="footer-content">
+        <h4 class="lh-lg" style="font-size: 16px">Flor&cultura</h4>
+        <p class="lh-lg" style="font-size: 14px">info@mysite.com</p>
+        <p class="lh-lg mt-4" style="font-size: 12px">
+          &copy;2023 by Flor&cultura. All rights reserved.
+        </p>
+      </div>
+    </footer>
 
-<!-- Footer -->
-  <footer>
-    <div class="container-md text-center">
-      <h4 class="lh-lg">Floral Essence</h3>
-      <p class="lh-lg">info@mysite.com
-      <p class="lh-lg fs-6">&copy;2023 by Floral Essence. All rights reserved.</p>
-    </div>
-  </footer>
-
-  
-
-  <script src="Script/shop-all.js"></script>
-  <script src="Script/script.js"></script>
-</body>
-
-
-
+    <script src="Script/index.js"></script>
+    <script src="Script/script.js"></script>
+    <scrip src="Script/shop-all.js"></scrip>
+  </body>
 </html>
