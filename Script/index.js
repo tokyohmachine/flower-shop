@@ -77,7 +77,6 @@ $(document).ready(function() {
    
   });
   
- 
   $('.second-card').on('mouseover', function() {
     $(this).find("#home-shop-button").show('fast');
   });
