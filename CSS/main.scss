@@ -1,0 +1,386 @@
+
+// Mixin definition
+@mixin transparent-bar {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  h4 {
+    font: normal 40px 'Merriweather', serif;
+  }
+  
+  
+  h1, h3, h5, h6, p, a, li, .login{
+    font: normal 16px Madefor, Helvetica Neue,Helvetica,Arial,メイリオ,meiryo,ヒラギノ角ゴ pro w3,hiragino kaku gothic pro,sans-serif;
+    color: black; 
+    text-decoration: none;
+  }
+  
+  h2 {
+      font: normal 40px 'Merriweather', serif;
+      
+      &:hover {
+          color: white;
+          cursor: pointer;
+      }
+  }
+  
+  
+  .navbar-brand {
+      &:hover {
+          background-color: #AED8CC;
+      }
+  }
+  
+  #button-container {
+      display: flex;
+      align-items: center;
+  }
+  #menuToggle {
+      border: none;
+      color: black;
+      font-size: 30px;
+      margin-right: 20px;
+      position: relative;
+      cursor: pointer;
+      &:hover {
+          cursor: pointer;
+      }
+  }
+  #menu {
+      display: none;
+      position: absolute;
+      top: 80px;
+      right: 30px;
+      padding: 20px;
+      margin: 0;
+      background-color: white;
+      min-width: 300px;
+      height: 400px;
+      li {
+          &:hover {
+              background-color: #AED8CC;
+          }
+          padding: 20px 0;
+          font-size: 22px;
+          list-style: none;
+      }
+  }
+  #menu.show {
+      display: block;
+  }
+  
+  #h3-main {
+    font: bold 20px italic;
+      color: #224B0C;
+      padding-top: 90px;
+  }
+  #h1-main {
+    font: bolder 150px;
+      color: white;
+      z-index: 10;
+      text-decoration: underline;
+  }
+  #spring-button {
+      width: 150px;
+      border-radius: 0;
+      background-color: #224B0C;
+  }
+  .a-spring {
+      text-decoration: none;
+      color: white;
+  }
+  #card-text {
+      line-height: 2rem;
+      margin-top: 15px;
+  }
+  #card-about {
+      margin: 30% 0px 30% 85px;
+      background-color: white;
+      padding: 60px;
+      width: 90%;
+      border-radius: 5px;
+  }
+  .second-card {
+      position: relative;
+      overflow: hidden;
+      &:hover {
+          .transparent-bar {
+              opacity: 1;
+              cursor: pointer;
+          }
+      }
+  }
+  .second-card-home {
+      position: relative;
+      overflow: hidden;
+      &:hover {
+          .transparent-bar-home {
+              opacity: 1;
+              cursor: pointer;
+          }
+      }
+  }
+  
+  .transparent-bar {
+    @include transparent-bar;
+      bottom: 21%;
+  }
+  .transparent-bar-home {
+      @include transparent-bar;
+      bottom: 26%;
+  }
+  
+  #home-shop-button {
+      display: none;
+      background-color: #224B0C;
+      color: white;
+      border-radius: 0;
+      margin: 10px auto 0px;
+      padding: 10px 40px;
+      width: 100%;
+  }
+  .custom-border {
+      border-bottom: 2px solid #224B0C;
+      width: 5%;
+  }
+  .card-img-about {
+      width: 100%;
+      max-width: 450px;
+      height: auto;
+  }
+  .card-about-second {
+      left: 20%;
+  }
+  #title-handle {
+      margin: 30px 8.5%;
+  }
+  #viewAllButton {
+      background-color: #224B0C;
+      border-radius: 0;
+      margin: 50px auto;
+      padding: 10px 40px;
+      max-width: 200px;
+  }
+  .contact-container {
+      padding: 50px;
+      background-color: white;
+      margin: 10% auto;
+      width: 80%;
+  }
+  .contact-title {
+      color: #224b0c;
+      font-size: 16px;
+      margin-top: 20px;
+      padding: 20px 20px 10px 20px;
+  }
+  .custom-border-contact {
+      border-bottom: 2px solid #224B0C;
+      width: 15%;
+      margin-left: 20px;
+  }
+  .contact-list {
+      list-style: none;
+      margin: 15px 0px 20px -10px;
+      padding: 20px 30px 20px 30px;
+      li {
+          line-height: 2rem;
+      }
+  }
+  label {
+      margin-left: 20px;
+      padding: 20px 0px 0px;
+  }
+  #button-add {
+      background-color: #AED8CC;
+      color: #224B0C;
+      border-radius: 0;
+      max-width: 100px;
+      cursor: pointer;
+      &:hover {
+          background-color: #A1CCD1;
+      }
+  }
+  #input {
+      &:focus {
+          border-color: black;
+      }
+      &:hover {
+          border: 3px solid black;
+      }
+  }
+  .dropdown {
+      h3 {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+      }
+  }
+  .img-fluid-shop {
+      width: 1100px;
+      height: 280px;
+      object-fit: cover;
+      object-position: 50% 50%;
+  }
+  .shop-container {
+      margin-top: 10%;
+  }
+  .price-container {
+      margin-top: 10%;
+  }
+  #priceRangeSlider {
+      float: right;
+  }
+  .form-range {
+      max-width: 100px;
+  }
+  
+  
+  
+  /* #chat-wrapper {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 10;
+    } */
+  /* #chat-button {
+      margin-right: 20px;
+      background-color: #8E3200;
+      color: #fff;
+      border-radius: 25px;
+      padding: 10px 40px;
+      font-family: 'Roboto', serif;
+    }
+    
+    
+  
+    #chat-window {
+      width: 350px;
+      height: 530px;
+      border: 1px solid #ccc;
+      border-radius: 30px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 10px;
+      background-color: white;
+    }
+    
+    .chat-header {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+    
+    .chat-header h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+    
+    .chat-header p {
+      margin: 0;
+      font-size: 14px;
+      color: #888;
+    }
+    .online-status {
+      display: flex;
+      align-items: center;
+    }
+    
+    .online-dot {
+      width: 8px;
+      height: 8px;
+      background-color: green;
+      border-radius: 50%;
+      margin-right: 5px;
+    }
+  
+    .chat-messages {
+      height: 380px;
+      margin-bottom: 10px;
+      background-color: #EEEEEE;
+    }
+    
+  
+    .publi-w {
+      position: relative;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      padding: 12px 20px;
+      background-color: #f9fafb;
+  } */
+  /*
+  .publi-w>*:first-child {
+      margin-left: 0;
+  }
+  
+  .publi-w>* {
+      margin: 0 8px;
+  }
+  
+  .text-input {
+      -webkit-box-flex: 1;
+      flex-grow: 1;
+      border: none;
+      outline: none !important;
+      background-color: transparent;
+  }
+  
+  button, input, optgroup, select, textarea {
+      font-family: Roboto,sans-serif;
+      font-weight: 300;
+  }
+  
+  .publisher-btn {
+      background-color: transparent;
+      border: none;
+      color: #8b95a5;
+      font-size: 16px;
+      cursor: pointer;
+      overflow: -moz-hidden-unscrollable;
+      -webkit-transition: .2s linear;
+      transition: .2s linear;
+  }
+  
+  .file-group {
+      position: relative;
+      overflow: hidden;
+  } 
+  
+  .publisher-btn {
+      background-color: transparent;
+      border: none;
+      color: #cac7c7;
+      font-size: 16px;
+      cursor: pointer;
+      overflow: -moz-hidden-unscrollable;
+      -webkit-transition: .2s linear;
+      transition: .2s linear;
+  } 
+  
+  .file-group input[type="file"] {
+      position: absolute;
+      opacity: 0;
+      z-index: -1; 
+      width: 20px;
+  }
+  
+  .text-info {
+      color: #48b0f7 !important;
+  }
+  
+  .emoji-picker-container .emoji-picker {
+    display: none;
+  }
+  
+  .emoji-picker-container.show .emoji-picker {
+    display: block;
+  } */
